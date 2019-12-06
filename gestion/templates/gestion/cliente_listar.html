@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Clientes</h2>
+
+    <ul>
+        {% for Clientes in object_list %}
+          <li>{{ Clientes.nombre_cliente }} - {{ Clientes.direccion }} </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Añadir persona</h2>
+
+    Haga click <a href="{% url 'upersonas:padd'  %}">aquí</a> para añadir una persona.
+
+</body>
+</html> 

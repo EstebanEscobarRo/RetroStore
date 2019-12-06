@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{& block title &} Encuentranos{& endblock &}
+
+
+
+{% block content  %}   
+
+<!-- Page top section -->
+<section class="page-top-section set-bg" data-setbg= "{% static 'img/page-top-bg/4.jpg' %}">
+    <div class="page-info">
+        <h2>Registro de usuario</h2>
+        <div class="site-breadcrumb">
+            <a href="">Retro store</a>  /
+            <span>Registro de usuario</span>
+        </div>
+    </div>
+</section>
+<!-- Page top end-->
+
+
+
+ <section class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 order-1 order-lg-1 text-white">
+                    {% if form.errors %}
+                    <p>Tu nombre de usuario y contraseña no coinciden, por favor, intenta de nuevo.</p>
+                    {% endif %}
+
+                    {% if next %}
+                        {% if user.is_authenticated %}
+                        <p>Tu cuenta no posee permisopara acceder a esta pagina. Para continuar >:3, por favor, ingresa con una cuenta que posea acceso.</p>
+                        {% else% }
+                        <p>Por favor ingresa para ver esta página.</p>
+                        {% endif %}
+                    {% endif %}
+                    <form action="{% url 'login' %}" method="POST" class="col-lg-7 order-2 order-lg-1 contact-form text-white"> 
+                        {% csrf_token %}
+                        
+                        <div>
+                            <td>{{ form.username.label_tag }} </td>
+                            <td>{{ form.username }}</td>
+                        </div>
+                            
+                   
+                        <div>
+                            <td> {{  form.password.label_tag  }}  </td>
+                            <td> {{  form.password  }}  </td>
+                        </div>
+
+                        <div>
+                            <button id="log" type="submit" value="Ingresar" class="site-btn">Ingresar <img src="{% static 'img/icons/double-arrow.png' %}" alt="#"/></button>
+                            <input type="hidden" name="next" value="{{  next  }}"/>
+                        </div>
+                        </form>
+                        <p><a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a></p>
+            </div> 
+            <div class="col-lg-5 order-1 order-lg-2 contact-text text-white">
+                    <h3 class="palotrolaoctm">Hola, di hola!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</p>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="img/icons/location.png" alt=""></div>
+                        <div class="ci-text">Main Str, no 23, New York</div>
+                    </div>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="img/icons/phone.png" alt=""></div>
+                        <div class="ci-text">+546 990221 123</div>
+                    </div>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="img/icons/mail.png" alt=""></div>
+                        <div class="ci-text">hosting@contact.com</div>
+                    </div>
+                </div>      
+            
+        </div>
+    </div>
+</section>
+ 
+{% endblock %}  

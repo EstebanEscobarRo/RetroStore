@@ -1,0 +1,146 @@
+{% load staticfiles %}
+<html>
+
+    <head>
+
+        <title>
+
+            {% block title  %}  Retro store {% endblock %}
+        </title>
+
+    <!-- Stylesheets -->
+
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %} ">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    {# CSS bootstrap #}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+    </head>
+
+    <body>
+
+
+          <!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-warp">
+
+			<div class="header-bar-warp d-flex">
+				<!-- site logo -->
+                <a href="" class="site-logo"> 
+					<img src=" {% static 'img/logo.png'%}" alt="">
+				</a>
+				<nav class="top-nav-area w-100">
+					<div class="user-panel">
+						<a href="">Login</a> / <a href="cliente/create">Registrarse</a>
+					</div>
+					<!-- Menu -->
+					<ul class="main-menu primary-menu">
+						<li><a href="">Home</a></li>
+						<li><a href="encuentranos/">Encuentranos</a>
+						</li>
+						<li><a href="juegos/">Juegos</a></li>
+						<li><a href="">Noticias</a></li>
+						<li><a href="">Otros</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+
+
+
+
+
+
+
+
+    {% block content  %}     {% endblock %}
+
+
+
+
+
+
+            <!-- Newsletter section -->
+	<section class="newsletter-section">
+            <div class="container">
+                <h2>Suscríbete a nuestro boletín</h2>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="INTRODUCE TU CORREO ELECTRÓNICO">
+
+                    <button class="site-btn">Suscríbete <img src= " {% static  'img/icons/double-arrow.png' %}" alt="#"/></button>
+                </form>
+            </div>
+        </section>
+        <!-- Newsletter section end -->
+
+
+        <!-- Footer section -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-left-pic">
+                    <img src= " {% static 'img/footer-left-pic.png' %}" alt="">
+                </div>
+                <div class="footer-right-pic">
+                    <img src=" {% static 'img/footer-right-pic.png' %}" alt="">
+                </div>
+                <a href="#" class="footer-logo">
+                    <img src= " {% static 'img/logo.png' %}" alt="">
+
+                </a>
+                <ul class="main-menu footer-menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Games</a></li>
+                    <li><a href="">Reviews</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">asdas</a></li>
+                </ul>
+
+                <div class="copyright"><a href="">Colorlib</a> 2019 @ Todos los derechos reservados</div>
+            </div>
+        </footer>
+        <!-- Footer section end -->
+
+
+
+
+
+
+    {% load static %}
+    <script src="{%static 'js/jquery-3.2.1.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/bootstrap.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/jquery.slicknav.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/owl.carousel.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/jquery.sticky-sidebar.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/jquery.magnific-popup.min.js' %} "></script>
+    {% load static %}
+    <script src="{%static 'js/main.js'%} "></script>
+
+
+    </body>
+
+</html>
