@@ -4,39 +4,29 @@ Seccion : 007D
 
 Pasos a seguir :
 
-1.-Ir a al terminal de windows (cmd)
-2-ir a la la carpeta donde se encuentre manage.py de nuestro proyecto 
-ej : cd C:\Users\Usuario\OneDrive\Escritorio\Trabajo\retrostore
-3.-Crear entorno virtual en la terminar con los siguentes comandos:
+1.-Para ingresar nuestra pagina RetroStore, hay que ir a la siguente url:
+    http://retrostore1.pythonanywhere.com/gestion/
 
-    pip3 install virtualenvwrapper-win  (python -m pip install --upgrade pip)
-    mkvirtualenv drjango_ambiente_retroStore (crear entorno)
+2.-Para poder acceder al menu de Administrador de django, hay que ir a la siguente url :
+    http://retrostore1.pythonanywhere.com/admin/
 
-4.-Instalar django en el ambiente virtual a traves de la terminar de windows (cmd) con el siguiente comando : 
+3-Datos para poder iniciar sesión en el menu Administrativo de django:
+    Nombre de usuario:  RetroStore
+    Contraseña:         retrostore123
 
-    pip3 install django    
-
-5.-Una vez y con todos los pasos anteriores ya terminados, hay que iniciar el server a traves de la terminar de windows
-con el siguente comando:
-
-    Python manage.py runserver
-
-6.-una vez iniciado el server podrá acceder al menú del administrador con la siguiente url: http://127.0.0.1:8000/admin/, 
-donde deberá ingresar las credenciales correspondientes al administrador, las cuales son: 
-
-    Datos super Usuario
+4-Listas de paginas de Retro Store:
     
-    Usuario : Trabajo
-    Contraseña : trabajo123
+    1.- Administrador:              http://retrostore1.pythonanywhere.com/admin/
+    2.- Página Principal:           http://retrostore1.pythonanywhere.com/gestion/
+    3.- Página Encuentranos:        http://retrostore1.pythonanywhere.com/gestion/encuentranos/
+    4.- Página Juegos:              http://retrostore1.pythonanywhere.com/gestion/juegos/
+    5.- Crear Usuario:              http://retrostore1.pythonanywhere.com/gestion/cliente/create/
+    6.- Modificar Usuario:          http://retrostore1.pythonanywhere.com/gestion/cliente/"id_cliente_creado"/update/
+                                    Ej: http://retrostore1.pythonanywhere.com/gestion/cliente/31/update/
+    7.- Eliminar Usuario:           http://retrostore1.pythonanywhere.com/gestion/cliente/"id_cliente_creado"/delete/
+                                    Ej: http://retrostore1.pythonanywhere.com/gestion/cliente/31/delete/
+    8.- Iniciar session:            http://retrostore1.pythonanywhere.com/accounts/login/
+    9.- Restablecer contraseña      http://retrostore1.pythonanywhere.com/accounts/password_reset/
+    10.-Sesión terminada            http://retrostore1.pythonanywhere.com/accounts/logout/
 
-7.- Luego de esto ya debería tener acceso a todas las paginas disponibles en la aplicación llamada "gestion".
 
-    Lista de paginas :
-    
-    1.- Administrador:       http://127.0.0.1:8000/admin/
-    2.- Página Principal:    http://127.0.0.1:8000/gestion/
-    3.- Página Encuentranos: http://127.0.0.1:8000/gestion/encuentranos/
-    4.- Página Juegos:       http://127.0.0.1:8000/gestion/juegos/
-    5.- Crear Usuario:       http://127.0.0.1:8000/gestion/cliente/create/
-    6.- Modificar Usuario:   http://127.0.0.1:8000/gestion/cliente/"id_cliente_creado"/update/
-    7.- Eliminar Usuario:    http://127.0.0.1:8000/gestion/cliente/"id_cliente_creado"/delete/
